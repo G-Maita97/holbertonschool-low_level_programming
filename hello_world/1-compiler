@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc $FLAGSGCC -c $CFILE -o main.o
+gcc $FLAGS -c $CFILE -o main.o

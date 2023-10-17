@@ -1,4 +1,4 @@
-include <stdio.h>
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -6,5 +6,6 @@ include <stdio.h>
  */
 int main(void)
 {
-    return (0);
+	printf("Holberton School");
+	return (0);
 }
