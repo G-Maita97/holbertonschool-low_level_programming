@@ -1,12 +1,13 @@
 #include <stdio.h>
+
 /**
- *Utilización de la función puts en lugar de printf.
- * 
- *El resultado debe retornar en 0.
+ * main - print using puts funtion
+ * Description: Resolve task#4 Holberton
+ * Return: 0
  */
 
 int main(void)
 {
-	puts("Programming is like building a multilingual puzzle\n");
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
