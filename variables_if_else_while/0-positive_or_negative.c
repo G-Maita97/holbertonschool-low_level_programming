@@ -3,8 +3,8 @@
 #include <stdio.h>
 /**
 * main - using conditionals.
-* Declaration : in this case we using conditionals.
-* main funtion for oper conditionals.
+* Description : in this case we using conditionals.
+* Return: 0
 */
 int main(void)
 {
