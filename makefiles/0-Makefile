@@ -1,0 +1,7 @@
+all: Mostrar compilar
+
+Mostrar:
+	@echo "gcc m.h main.c school.c -o school"
+compilar:
+	@gcc m.h main.c school.c -o school
+
