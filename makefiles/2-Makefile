@@ -1,20 +1,20 @@
 CC=gcc
-SRC=main.c school.c 
+SRC=main.c school.c
+SRCM=main.c
+SRCS=school.c
 NAME=school
 OBJ=main.o school.o
 
 all: Compilar1 Compilar2 Compilar3 Mostrar
 
 Compilar1:
-	@echo "$(CC) -c main.c -o main.o"
-	@$(CC) -c main.c -o main.o
+	$(CC) -c $(SRCS) -o main.o
+
 Compilar2:
-	@echo "$(CC) -c school.c -o school.o"
-	@$(CC) -c school.c -o school.o
+	$(CC) -c $(SRCS) -o school.o
 
 Compilar3:
-	@echo "$(CC) -c m.h"
-	@$(CC) -c m.h
+	$(CC) -c m.h
 
 Mostrar:
 	@echo "@$(CC) -c $(OBJ) m.h.gch -o $(NAME)"
