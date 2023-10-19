@@ -1,5 +1,5 @@
 CC=gcc
-SRH=main.c school.c
+SRH=*.c
 
 all: Mostrar
 
