@@ -1,0 +1,9 @@
+CC=gcc
+SRH=main.c school.c
+
+all: Mostrar
+
+Mostrar:
+	@echo "$(CC) m.h $(SRH) -o school"
+compilar:
+	@$(CC) m.h $(SRH) -o school
