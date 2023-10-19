@@ -1,0 +1,20 @@
+CC=gcc
+SRC=main.c school.c 
+NAME=school
+OBJ=main.o school.o
+
+all: Compilar1 Compilar2 Compilar3 Mostrar
+
+Compilar1:
+	@echo "gcc -c main.c -o main.o"
+	@gcc -c main.c -o main.o
+Compilar2:
+	@echo "gcc -c school.c -o school.o"
+	@gcc -c school.c -o school.o
+
+Compilar3:
+	@echo "gcc -c m.h"
+	@gcc -c m.h
+
+Mostrar:
+	@echo "@gcc -c $(OBJ) m.h.gch -o $(NAME)"
