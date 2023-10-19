@@ -4,14 +4,15 @@ SRCM=main.c
 SRCS=school.c
 NAME=school
 OBJ=main.o school.o
-
+OBJM=main.o
+OBJS=school.o
 all: Compilar1 Compilar2 Compilar3 Mostrar
 
 Compilar1:
-	$(CC) -c $(SRCS) -o main.o
+	$(CC) -c $(SRCS) -o $(OBJM)
 
 Compilar2:
-	$(CC) -c $(SRCS) -o school.o
+	$(CC) -c $(SRCS) -o $(OBJS)
 
 Compilar3:
 	$(CC) -c m.h
