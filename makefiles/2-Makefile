@@ -1,17 +1,21 @@
-CC= gcc
+CC = gcc
 NAME = school
 SRC = main.c school.c
-#Transforma la lista de archivos .c en .o
 OBJ = $(SRC:.c=.o)
-
+#Transforma la lista de archivos .c en .o
+#() OBJ = $(SRC:.c=.o) = main.o school.o
+#() $(CC) -o $@ $^ =gcc -o school main.o school.o
+#() () Representa el standart output de la compilacion (school)
+#() ($^)Representa todos los requisitos previos, que son indispesables para ejecutar la compilacion (main.o school.
+#() %.o es una regla y %.c es una forma de decir "todos los archivos .c"
+#() 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-		$(CC) -o $@ $^
-
 %.o: %.c
-		$(CC) -c -o $@ $<
+	$(CC) -c -o $@ $<
+
+$(NAME): $(OBJ)
+	$(CC) -o $@ $^
 
 clean:
-		rm -f $(OBJ) $(NAME)
-
+	rm -f $(OBJ) $(NAME)
