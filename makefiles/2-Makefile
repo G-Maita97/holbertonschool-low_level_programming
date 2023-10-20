@@ -1,21 +1,17 @@
-CC=gcc
-SRC=main.c school.c
-SRCM=main.c
-SRCS=school.c
-NAME=school
-OBJ=main.o school.o
-OBJM=main.o
-OBJS=school.o
-all: Compilar1 Compilar2 Compilar3 Mostrar
+CC= gcc
+NAME = school
+SRC = main.c school.c
+#Transforma la lista de archivos .c en .o
+OBJ = $(SRC:.c=.o)
 
-Compilar1:
-	$(CC) -c $(SRCS) -o $(OBJM)
+all: $(NAME)
 
-Compilar2:
-	$(CC) -c $(SRCS) -o $(OBJS)
+$(NAME): $(OBJ)
+		$(CC) -o $@ $^
 
-Compilar3:
-	$(CC) -c m.h
+%.o: %.c
+		$(CC) -c -o $@ $<
 
-Mostrar:
-	@echo "@$(CC) -c $(OBJ) m.h.gch -o $(NAME)"
+clean:
+		rm -f $(OBJ) $(NAME)
+

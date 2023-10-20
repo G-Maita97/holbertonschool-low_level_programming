@@ -1,7 +1,8 @@
-all: Mostrar compilar
+all: Mostrar compilar clean
 
 Mostrar:
 	@echo "gcc m.h main.c school.c -o school"
 compilar:
 	@gcc m.h main.c school.c -o school
-
+clean:
+	rm -f school
