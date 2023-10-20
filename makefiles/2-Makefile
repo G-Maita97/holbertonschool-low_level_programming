@@ -5,10 +5,10 @@ OBJ = $(SRC:.c=.o)
 #Transforma la lista de archivos .c en .o
 #() OBJ = $(SRC:.c=.o) = main.o school.o
 #() $(CC) -o $@ $^ =gcc -o school main.o school.o
-#() () Representa el standart output de la compilacion (school)
+#() ($@) se convierte en "school" porque representa el nombre del objetivo en esta regla.
 #() ($^)Representa todos los requisitos previos, que son indispesables para ejecutar la compilacion (main.o school.
 #() %.o es una regla y %.c es una forma de decir "todos los archivos .c"
-#() 
+#() ($<) Representa el primer requisito Representa el primer requisito de la regal actual.
 all: $(NAME)
 
 %.o: %.c
