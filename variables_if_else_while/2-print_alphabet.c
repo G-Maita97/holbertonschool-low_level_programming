@@ -1,13 +1,15 @@
 #include <stdio.h>
 /**
- * function (main) for start the program
- * Description: using if else while
- * Return = 0
+ * main - print alfabet.
+ * Description: print alfabet to the standart output.
+ * Return: 0
  */
-int main (void)
+int main(void)
 {
-	char L = 'a';
-	for(L = 'a'; L <= 'z'; L++)
+	char L;
+
+	L = 'a';
+	for (L = 'a'; L <= 'z'; L++)
 	{
 		putchar(L);
 	}
