@@ -11,11 +11,11 @@ OBJ = $(SRC:.c=.o)
 #() ($<) Representa el primer requisito Representa el primer requisito de la regal actual.
 all: $(NAME)
 
-%.o: %.c
-	$(CC) -c -o $@ $<
-
 $(NAME): $(OBJ)
 	$(CC) -o $@ $^
+
+%.o: %.c
+	$(CC) -c -o $@ $<
 
 clean:
 	rm -f $(OBJ) $(NAME)
