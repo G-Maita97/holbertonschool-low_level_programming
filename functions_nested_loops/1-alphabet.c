@@ -1,12 +1,10 @@
 #include "main.h"
 /**
- * main - print putchar
- * Description: print putchar to the standard output
+ * print_alphabet - print with putchar albabet.
+ * Description: print alfabet to the standard output.
  * Return: 0
  */
-int main(void)
-{
-	void print_alphabet(void);
+void print_alphabet(void)
 	{
 		char N;
 
@@ -15,7 +13,4 @@ int main(void)
 			_putchar(N);
 		}
 		_putchar('\n');
-
 	}
-	return (0);
-}
