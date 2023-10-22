@@ -1,0 +1,27 @@
+#include <stdio.h>
+/**
+ * En este caso se utilizp el operador ternario (expresión_bool) ? (expresion1) : (expresion2)
+ * char NHx = (H < 10) ? (H + '0') : (H - 10 + 'a'),
+ * Esto quiere decir que si el numero que salga del 1 al 15 es un numero menor que 10 entonces se aplicara,
+ * la (expresion1)(H + '0') significa que todos los valores enteros que estan entre 0 y 9 se convertiran en char(caracteres).
+ * Y la otra parte quiere decir que si no es un numero entre 0 y 9 entonces se aplicara,
+ * la (expresion2)(H - 10 + 'a') significa que si se le da el primer valor que es 0 seria (0 - 10 + 'a')
+ * en pocas palabras te dice que 10 sera igual a su valor en hexadecimal segun el ascii, y ese valor es el caracter 'a',
+ * en resumen dice que todos los numeros que no esten dentro de 0 y 9 seran cambiados por su valor en hexadecimal.
+ * char NHx = aqui buscamos encerrar en una variable para que putchar pueda imprimirlo.
+ * main - print numers.
+ * Description: function (main) for start the program.
+ * Return: 0
+ */
+int main(void)
+{
+        int H;
+
+        for (H = 0; H <= 15; H++)i
+        {
+                char NHx = (H < 10) ? (H + '0') : (H - 10 + 'a');
+                putchar(NHx);
+        }
+        putchar('\n');
+        return (0);
+}
