@@ -1,16 +1,35 @@
 #include "main.h"
-
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * print_to_98 - print with putchar n98.
+ * @n: variable
+ * Description: print n98 to the standard output.
+ * Return: 0
  */
-int main(void)
+void print_to_98(int n)
 {
-	print_to_98(0);
-	print_to_98(98);
-	print_to_98(111);
-	print_to_98(81);
-	print_to_98(-10);
-	return (0);
+	if (n <= 98)
+	{
+		for (int i = n; i <= 98; i++)
+		{
+			_putchar(i + '0');
+			if (i < 98)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+		}
+	}
+	else
+	{
+		for (int i = n; i >= 98; i--)
+		{
+			_putchar(i + '0');
+			if (i > 98)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+		}
+	}
+		_putchar('\n');
 }
