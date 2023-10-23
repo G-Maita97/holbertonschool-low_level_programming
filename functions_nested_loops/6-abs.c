@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _abd - return vale abs.
+ * _abs - return vale abs.
  * @n: Variable
  * Description: return vale abs to the standard output.
  * Return: 0
