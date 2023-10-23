@@ -1,16 +1,12 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * add - print with putchar add.
+ * @a: variable.
+ * @b: variable.
+ * Description: print add. to the standard output.
+ * Return: 0
  */
-int main(void)
+int add(int a, int b)
 {
-	int n;
-
-	n = add(89, 9);
-	printf("%d\n", n);
-	return (0);
+	return (a + b);
 }
