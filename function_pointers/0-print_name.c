@@ -8,5 +8,12 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	f(name);
+	if (f == NULL)
+	{
+		printf("No printing function provided for name: %s\n", name);
+	}
+	else
+	{
+		f(name);
+	}
 }
