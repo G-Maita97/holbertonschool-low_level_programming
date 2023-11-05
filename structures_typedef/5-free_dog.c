@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include "dog.h"
 /**
- *
- *
- * 
+ * free_dog - function
+ * @d: variable pointer
+ * Description: frees memory space
  */
 void free_dog(dog_t *d)
 {
