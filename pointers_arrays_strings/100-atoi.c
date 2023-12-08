@@ -1,50 +1,27 @@
 #include "main.h"
+
 /**
- * _atoi - print numbers.
- * @s: variable.
- * Description: print with _putchar.
- * Return: 0
+ * _atoi - Converts a string to an integer.
+ * @s: The string to be converted.
+ *
+ * Return: The integer value of the converted string.
  */
 int _atoi(char *s)
 {
-	int result;
-	int sign;
-	int hasDigit;
+	int sign = 1;
+	unsigned int num = 0;
 
-	result = 0;
-        sign = 1;
-        hasDigit = 0;
-	while (*s)
-	{
-		if (*s == '-' && !hasDigit)
-		{
-			sign = -1;
-		}
+	do {
+		if (*s == '-')
+			sign *= -1;
+
 		else if (*s >= '0' && *s <= '9')
-		{
-			int digit;
+			num = (num * 10) + (*s - '0');
 
-			digit = *s - '0';
-			if (result > (2147483647 - digit) / 10)
-			{
-				if (sign == 1)
-				{
-					return (2147483647);
-				}
-				else
-				{
-					return (-2147483648);
-				}
-			}
-			result = result * 10 + digit;
-			hasDigit = 1;
-		}
-		else if (hasDigit)
-		{
+		else if (num > 0)
 			break;
-		}
-		s++;
-	}
-	return (result * sign);
-}
 
+	} while (*s++);
+
+	return (num * sign);
+}
